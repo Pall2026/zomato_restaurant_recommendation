@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --zomato-red: #cb202d;
+  --zomato-light: #f4f4f4;
+}
+
+body {
+  background-color: #FFFDFB;
+  color: #1c1c1c;
+  scroll-behavior: smooth;
+}
+
+/* Custom range slider styling */
+input[type='range'] {
+  -webkit-appearance: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+  background-image: linear-gradient(#ff4f4f, #ff4f4f);
+  background-repeat: no-repeat;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #cb202d;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.5);
+  transition: background .3s ease-in-out;
+}
+
+.bg-zomato-light {
+  background-color: var(--zomato-light);
+}
+
+.text-zomato-dark {
+  color: #1c1c1c;
+}
