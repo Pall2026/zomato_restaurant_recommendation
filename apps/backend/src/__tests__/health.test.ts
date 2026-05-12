@@ -14,7 +14,8 @@ jest.mock('../db/client', () => ({
 }));
 
 describe('Health API', () => {
-  it('should return a 200 OK from the /health endpoint', async () => {
+  it('should return a 200 OK from the /health endpoint',
+  async () => {
     const response = await request(app).get('/health');
     expect(response.status).toBe(200);
     expect(response.body.status).toBe('ok');
