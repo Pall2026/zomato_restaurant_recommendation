@@ -6,7 +6,7 @@ import { getGroqRecommendations } from "../llm/groq";
 const recommendationsRouter = Router();
 
 const RecommendationRequestSchema = z.object({
-    city: z.string({ required_error: "City is required" }).min(1),
+    city: z.string().min(1, "City is required"),
     cuisine: z.string().optional().nullable(),
     max_budget: z.number().optional().default(9999),
     min_rating: z.number().optional().default(0).refine(val => val >= 0 && val <= 5, {
