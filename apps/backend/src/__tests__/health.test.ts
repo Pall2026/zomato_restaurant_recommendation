@@ -1,6 +1,10 @@
 import request from 'supertest';
 import { app } from '../index';
 
+jest.mock('../llm/groq', () => ({
+  getGroqRecommendations: jest.fn().mockResolvedValue([]),
+}));
+
 jest.mock('../db/client', () => ({
   pool: {
     query: jest.fn().mockResolvedValue({ rows: [] }),

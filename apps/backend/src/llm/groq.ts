@@ -5,9 +5,9 @@ import { parseGroqResponse, Recommendation } from "./output-parser";
 
 dotenv.config();
 
-const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY,
-});
+const groq = process.env.NODE_ENV !== 'test' 
+  ? new Groq({ apiKey: process.env.GROQ_API_KEY })
+  : null as any;
 
 export async function getGroqRecommendations(
     candidates: any[],
