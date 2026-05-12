@@ -1,7 +1,6 @@
 import request from 'supertest';
 import { app } from '../index';
 
-// Mock the database pool
 jest.mock('../db/client', () => ({
   pool: {
     query: jest.fn().mockResolvedValue({ rows: [] }),
