@@ -22,15 +22,17 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run tests
-        run: npm run test --workspace=apps/backend
+        working-directory: apps/backend
+        run: npx jest
         env:
           NODE_ENV: test
 
       - name: Build backend
-        run: npm run build --workspace=apps/backend
+        working-directory: apps/backend
+        run: npm run build
 
   frontend-build:
     name: Frontend — Build
