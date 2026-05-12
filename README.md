@@ -1,5 +1,6 @@
 AI Restaurant Recommendation Service
 A full-stack restaurant recommendation web app that uses real Zomato data and Groq LLM to deliver personalized dining suggestions for Bangalore.
+
 Live Demo: https://zomato-restaurant-recommendation-frontend-hb2459sfg.vercel.app/
 
 What it does
