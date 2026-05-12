@@ -10,7 +10,6 @@ jobs:
   backend-test:
     name: Backend — Test & Build
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -36,7 +35,6 @@ jobs:
   frontend-build:
     name: Frontend — Build
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
