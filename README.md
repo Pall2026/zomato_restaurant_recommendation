@@ -4,7 +4,7 @@ A full-stack restaurant recommendation web app that uses real Zomato data and Gr
 Live Demo: https://zomato-restaurant-recommendation-frontend-hb2459sfg.vercel.app/
 
 What it does
-Takes user preferences like city, cuisine type, budget, and minimum rating, queries a database of 51,717 real Zomato restaurants, and uses the Groq LLM to return the top 5 recommendations with AI-generated reasoning and real must-try dishes sourced from customer reviews.
+Takes user preferences like city, cuisine type, budget, and minimum rating, queries a database of 51,717 real Zomato restaurants in Bangalore, and uses the Groq LLM to return the top 5 recommendations with AI-generated reasoning and real must-try dishes sourced from customer reviews.
 
 Architecture
 [ User Browser ]
