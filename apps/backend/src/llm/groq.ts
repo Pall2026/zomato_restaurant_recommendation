@@ -20,8 +20,8 @@ Your goal is to analyze a list of restaurant candidates and pick the top 5 that 
 Provide a compelling reason for each recommendation.
 You must ONLY recommend must_try_dish from the Popular Dishes list provided for each restaurant. Never invent or hallucinate dish names that are not in the Popular Dishes list. If Popular Dishes is empty or "Not listed", set must_try_dish to null.
 
-Return ONLY a valid JSON array of objects. Do not include any conversational text before or after the JSON.
-Each object must follow this schema:
+Return ONLY a valid JSON object containing a "recommendations" array. Do not include any conversational text before or after the JSON.
+Each object in the array must follow this schema:
 {
   "name": "Restaurant Name",
   "cuisine": "Cuisine Types",
@@ -44,7 +44,7 @@ Please provide the top 5 recommendations in the specified JSON format.`;
                 { role: "system", content: systemPrompt },
                 { role: "user", content: userPrompt },
             ],
-            model: "llama-3.3-70b-versatile",
+            model: "openai/gpt-oss-20b",
             temperature: 0.5,
             max_tokens: 1000,
             top_p: 1,
